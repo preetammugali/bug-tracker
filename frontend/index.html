@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bug Tracker</title>
+
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🐛 Bug Tracker</h1>
+
+    <!-- ================= LOGIN / REGISTER ================= -->
+
+    <div class="card" id="authSection">
+
+        <h2>Login</h2>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email"
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <button id="loginButton">Login</button>
+
+        <button id="registerButton">Register</button>
+
+        <p id="authMessage"></p>
+
+    </div>
+
+
+    <!-- ================= USER ================= -->
+
+    <div class="card" id="userSection" style="display:none;">
+
+        <h2>Welcome, <span id="userName"></span></h2>
+
+        <p>
+            Role:
+            <strong id="userRole"></strong>
+        </p>
+
+        <button id="logoutButton">Logout</button>
+
+    </div>
+
+
+    <!-- ================= CREATE BUG ================= -->
+
+    <div class="card" id="createBugSection" style="display:none;">
+
+        <h2>Create Bug</h2>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Bug title"
+        >
+
+        <textarea
+            id="description"
+            placeholder="Bug description"
+        ></textarea>
+
+        <select id="priority">
+
+            <option value="low">Low</option>
+
+            <option value="medium" selected>
+                Medium
+            </option>
+
+            <option value="high">High</option>
+
+            <option value="critical">
+                Critical
+            </option>
+
+        </select>
+
+        <input
+            type="text"
+            id="assigned_to"
+            placeholder="Assigned to"
+        >
+
+        <button id="createBugButton">
+            Create Bug
+        </button>
+
+    </div>
+
+
+    <!-- ================= FILTER ================= -->
+
+    <div class="card" id="filterSection" style="display:none;">
+
+        <h2>Filter Bugs</h2>
+
+        <select id="statusFilter">
+
+            <option value="">
+                All Status
+            </option>
+
+            <option value="open">
+                Open
+            </option>
+
+            <option value="in_progress">
+                In Progress
+            </option>
+
+            <option value="resolved">
+                Resolved
+            </option>
+
+        </select>
+
+
+        <select id="priorityFilter">
+
+            <option value="">
+                All Priority
+            </option>
+
+            <option value="low">
+                Low
+            </option>
+
+            <option value="medium">
+                Medium
+            </option>
+
+            <option value="high">
+                High
+            </option>
+
+            <option value="critical">
+                Critical
+            </option>
+
+        </select>
+
+        <button id="filterButton">
+            Apply Filter
+        </button>
+
+    </div>
+
+
+    <!-- ================= BUG LIST ================= -->
+
+    <div class="card" id="bugSection" style="display:none;">
+
+        <h2>All Bugs</h2>
+
+        <div id="bugList"></div>
+
+    </div>
+
+</div>
+
+
+<!-- IMPORTANT: defer -->
+<script src="/frontend/script.js" defer></script>
+
+</body>
+</html>

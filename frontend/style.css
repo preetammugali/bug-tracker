@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   AUTHENTICATION
+   ========================= */
+
+#authSection {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#authSection h2 {
+    text-align: center;
+}
+
+#authMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   USER INFORMATION
+   ========================= */
+
+#userSection {
+    border-left: 5px solid #2563eb;
+}
+
+#userSection p {
+    margin: 8px 0;
+}
+
+#userRole {
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   MESSAGES
+   ========================= */
+
+#createBugMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   BUG
+   ========================= */
+
+.bug {
+    border: 1px solid #ddd;
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.bug h3 {
+    margin-top: 0;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.priority {
+    font-weight: bold;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
