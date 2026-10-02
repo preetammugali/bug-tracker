@@ -1,3 +1,4 @@
+
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer
@@ -87,7 +88,11 @@ app = FastAPI(
     description="Bug Tracking System with JWT Authentication and Authorization",
     version="1.0.0"
 )
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
+@app.get("/")
+def home():
+    return FileResponse("frontend/index.html")
 
 # =========================================================
 # 6. CORS
