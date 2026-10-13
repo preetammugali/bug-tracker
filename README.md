@@ -2,7 +2,7 @@
 
 A web-based **Bug Tracking System** designed to help administrators and testers manage, track, and resolve software bugs efficiently.
 
-📌 About the Project
+>>> About the Project
 
 The Bug Tracker provides a centralized platform where bugs can be reported, managed, assigned, and tracked through their resolution process.
 
